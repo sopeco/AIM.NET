@@ -5,6 +5,9 @@ using System.Text;
 
 namespace AIM.NET
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class AimNET
     {
     }
