@@ -2,6 +2,8 @@
 
 ## SetUp
 
+PostSharp is required and has to be added to the project
+
 ###Dependencies
 JNBShare.dll
 
