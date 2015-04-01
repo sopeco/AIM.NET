@@ -4,7 +4,9 @@ using org.aim.mainagent.csharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 
 namespace AIM_NET
 {
@@ -50,20 +52,7 @@ namespace AIM_NET
 
         private AIMnet()
         {
-            Starter.startAIM();
-        }
-
-
-        public void MakeTestRecord()
-        {
-            ResponseTimeRecord rtr = new ResponseTimeRecord();
-
-            rtr.setCallId(1L);
-            rtr.setOperation("method");
-            rtr.setResponseTime(10L);
-            rtr.setTimeStamp((long)(new DateTime() - new DateTime(1970, 1, 1)).TotalMilliseconds);
-
-            DataCollector.newRecord(rtr);
+            DotNetAgent.start("F:\\Dropbox\\HiWi\\aim.config");
         }
     }
 }
