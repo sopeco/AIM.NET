@@ -12,18 +12,17 @@ using System.Text;
 
 namespace AIM_NET.Aspects
 {
+    /// <summary>
+    /// Captures the executed SQL query of Database methods.
+    /// </summary>
     [PSerializable]
     public class SQLQueryAspect : AbstractMethodBoundaryAspect
     {
-
-        public SQLQueryAspect()
-        {
-            AspectPriority = 100;
-        }
-
+        /// <summary>
+        /// This method is invoked when the instrumented target methods are invoked.
+        /// </summary>
         public override void OnEntry(MethodExecutionArgs args)
         {
-            //Console.WriteLine("> OnInvoke");
             SQLQueryRecord record = new SQLQueryRecord();
 
             record.setTimeStamp((long)(DateTime.Now - new DateTime(1970, 1, 1)).TotalMilliseconds);

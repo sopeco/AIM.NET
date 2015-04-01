@@ -11,11 +11,12 @@ using System.Threading;
 namespace AIM_NET
 {
     /// <summary>
-    /// 
+    /// Utility class to access AIM and its DataCollector.
     /// </summary>
     public class AIMnet
     {
         private static AIMnet instance;
+
         public static AIMnet Instance
         {
             get
@@ -34,6 +35,9 @@ namespace AIM_NET
 
         private IDataCollector dataCollector;
 
+        /// <summary>
+        /// Returns the DataCollector specified by AIM.
+        /// </summary>
         public IDataCollector DataCollector
         {
             get

@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace AIM_NET.Aspects
 {
+    /// <summary>
+    /// Abstract super class for MethodBoundary aspects.
+    /// </summary>
     [PSerializable]
     public abstract class AbstractMethodBoundaryAspect : OnMethodBoundaryAspect
     {

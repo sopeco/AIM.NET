@@ -11,18 +11,26 @@ using System.Threading.Tasks;
 
 namespace AIM_NET.Aspects
 {
+    /// <summary>
+    /// Abstract to measure the response time and capture the executed SQL query.
+    /// </summary>
     [PSerializable]
     public class ResponseTimeSQLQueryAspect : AbstractMethodInterceptionAspect
     {
+        /// <summary>
+        /// This method is invoked when the instrumented target methods are invoked.
+        /// </summary>
         public override void OnInvoke(MethodInterceptionArgs args)
         {
+            // Create the SQLQuery Record
             SQLQueryRecord sqlRecord = new SQLQueryRecord();
+
             sqlRecord.setTimeStamp((long)(DateTime.Now - new DateTime(1970, 1, 1)).TotalMilliseconds);
             sqlRecord.setOperation(FullMethodName);
             sqlRecord.setProcessId("" + Process.GetCurrentProcess().Id);
 
             int queryIndex = -1;
-            // TODO
+            // TODO - Method differentiation
             if (FullMethodName.Equals("System.Data.Entity.Database:ExecuteSqlCommand(String, Object[])"))
             {
                 queryIndex = 0;
@@ -47,20 +55,14 @@ namespace AIM_NET.Aspects
 
             AIMnet.Instance.DataCollector.newRecord(sqlRecord);
 
-            //////////////////////////////////////////////
-
-            //Console.WriteLine("> OnInvoke");
+            // Create ResponseTimeRecord
             ResponseTimeRecord record = new ResponseTimeRecord();
-
             record.setTimeStamp((long)(DateTime.Now - new DateTime(1970, 1, 1)).TotalMilliseconds);
-
             record.setOperation(FullMethodName);
             record.setProcessId("" + Process.GetCurrentProcess().Id);
 
             long timeStart = (long)(DateTime.Now - new DateTime(1970, 1, 1)).TotalMilliseconds;
-
             base.OnInvoke(args);
-
             long timeEnd = (long)(DateTime.Now - new DateTime(1970, 1, 1)).TotalMilliseconds;
 
             record.setTimeStamp(timeEnd);
