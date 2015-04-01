@@ -18,7 +18,7 @@ namespace AIM_NET.Aspects
     public class ResponseTimeSQLQueryAspect : AbstractMethodInterceptionAspect
     {
         /// <summary>
-        /// This method is invoked when the instrumented target methods are invoked.
+        /// This method is invoked when the instrumented target method is invoked.
         /// </summary>
         public override void OnInvoke(MethodInterceptionArgs args)
         {

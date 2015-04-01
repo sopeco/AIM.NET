@@ -56,7 +56,7 @@ namespace AIM_NET
 
         private AIMnet()
         {
-            DotNetAgent.start("F:\\Dropbox\\HiWi\\aim.config");
+            DotNetAgent.start("C:\\aim.config");
         }
     }
 }

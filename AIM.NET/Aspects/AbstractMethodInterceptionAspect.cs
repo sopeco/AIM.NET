@@ -10,10 +10,10 @@ using System.Text;
 namespace AIM_NET.Aspects
 {
     /// <summary>
-    /// Super class for MethodAspects
+    /// Abstract super class for MethodInterception aspects.
     /// </summary>
     [PSerializable]
-    public abstract class AbstractMethodInterceptionAspect : /*OnMethodBoundaryAspect //*/ MethodInterceptionAspect
+    public abstract class AbstractMethodInterceptionAspect : MethodInterceptionAspect
     {
         /// <summary>
         /// The full name of the class that the target class has to be implemented.
