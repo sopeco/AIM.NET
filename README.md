@@ -4,7 +4,10 @@
 
 PostSharp is required and has to be added to the project
 
-JNBridge is requried and has to be added to the project. Additionally, the following classes are required and have to be provided by a JNBridge proxy DLL.
+jnBridge is requried and has to be added to the project. Additionally, the following classes are required and have to be provided by a jnBridge proxy DLL.
+A compiled jnBridge proxy (.NET45) is included in the repository.
+
+Specify aim.config in AIMnet class. (This is a hardcoded value at the moment)
 
 ###Dependencies
 JNBShare.dll
