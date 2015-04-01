@@ -13,16 +13,16 @@ Specify aim.config in AIMnet class. (This is a hardcoded value at the moment)
 JNBShare.dll
 
 ### Files in project
-rlm932_x64.dll
-rlm932_x86.dll
-App.config
+* rlm932_x64.dll
+* rlm932_x86.dll
+* App.config
 
 ## More
 
 ### Required Java classes
-org.aim.api.measurement.**AbstractRecord**
-org.aim.api.measurement.collector.**AbstractDataSource**
-org.aim.api.measurement.collector.**IDataCollector**
-org.aim.artifacts.records.**ResponseTimeRecord**
-org.aim.artifacts.records.**SQLQueryRecord**
-org.aim.mainagent.csharp.**Starter**
+* org.aim.api.measurement.**AbstractRecord**
+* org.aim.api.measurement.collector.**AbstractDataSource**
+* org.aim.api.measurement.collector.**IDataCollector**
+* org.aim.artifacts.records.**ResponseTimeRecord**
+* org.aim.artifacts.records.**SQLQueryRecord**
+* org.aim.mainagent.csharp.**DotNetAgent**
