@@ -56,7 +56,6 @@ namespace AIM_NET
 
         private AIMnet()
         {
-            DotNetAgent.start("C:\\aim.config");
         }
     }
 }
