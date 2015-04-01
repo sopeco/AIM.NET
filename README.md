@@ -10,9 +10,9 @@ JNBridge is requried and has to be added to the project. Additionally, the follo
 JNBShare.dll
 
 ### Files in project
-rlm932_x64.dll
-rlm932_x86.dll
-App.config
+* rlm932_x64.dll
+* rlm932_x86.dll
+* App.config
 
 ## More
 
