@@ -17,9 +17,9 @@ App.config
 ## More
 
 ### Required Java classes
-org.aim.api.measurement.**AbstractRecord**
-org.aim.api.measurement.collector.**AbstractDataSource**
-org.aim.api.measurement.collector.**IDataCollector**
-org.aim.artifacts.records.**ResponseTimeRecord**
-org.aim.artifacts.records.**SQLQueryRecord**
-org.aim.mainagent.csharp.**Starter**
+* org.aim.api.measurement.**AbstractRecord**
+* org.aim.api.measurement.collector.**AbstractDataSource**
+* org.aim.api.measurement.collector.**IDataCollector**
+* org.aim.artifacts.records.**ResponseTimeRecord**
+* org.aim.artifacts.records.**SQLQueryRecord**
+* org.aim.mainagent.csharp.**DotNetAgent**
